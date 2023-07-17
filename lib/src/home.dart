@@ -23,12 +23,32 @@ class Home extends StatelessWidget {
                 //     builder: (_) => const FirstPage(),
                 //   ),
                 // );
-                Get.to(() => const FirstPage());
+                Get.to(() => const FirstNamedPage());
               },
-            )
+            ),
+            ElevatedButton(
+              child: const Text("Named 라우트"),
+              onPressed: () {
+                // Navigator.of(context).pushNamed("/first");
+                Get.toNamed("/first");
+              },
+            ),
+            ElevatedButton(
+              child: const Text("Arguments 전달"),
+              onPressed: () {
+                // Navigator.of(context).pushNamed("/first");
+                Get.toNamed("/next", arguments: {"name": "탱구", "age": 22});
+              },
+            ),
           ],
         ),
       ),
     );
   }
+}
+
+class User {
+  String name;
+  int age;
+  User({this.name, this.age});
 }

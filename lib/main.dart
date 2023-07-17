@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getxlearn/src/home.dart';
+import 'package:getxlearn/src/page/normal/first.dart';
+import 'package:getxlearn/src/page/normal/next.dart';
+import 'package:getxlearn/src/page/normal/second.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +19,28 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Home(),
+      // initialRoute: "/",
+      // routes: {
+      //   "/": (context) => const Home(),
+      //   "/first": (context) => const FirstNamedPage(),
+      //   "second": (context) => const SecondNamedPage(),
+      // },
+      getPages: [
+        GetPage(
+            name: "/", page: () => const Home(), transition: Transition.zoom),
+        GetPage(
+            name: "/first",
+            page: () => const FirstNamedPage(),
+            transition: Transition.zoom),
+        GetPage(
+            name: "/second",
+            page: () => const SecondNamedPage(),
+            transition: Transition.zoom),
+        GetPage(
+            name: "/next",
+            page: () => const NextPage(),
+            transition: Transition.zoom),
+      ],
     );
   }
 }
