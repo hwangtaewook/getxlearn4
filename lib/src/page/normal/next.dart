@@ -16,7 +16,8 @@ class NextPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("${Get.arguments["name"]}:${Get.arguments["age"]}"),
+            Text(
+                "${(Get.arguments as User).name} : ${(Get.arguments as User).age}"),
             ElevatedButton(
               child: const Text("뒤로 이동"),
               onPressed: () {

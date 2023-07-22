@@ -37,7 +37,13 @@ class Home extends StatelessWidget {
               child: const Text("Arguments 전달"),
               onPressed: () {
                 // Navigator.of(context).pushNamed("/first");
-                Get.toNamed("/next", arguments: {"name": "탱구", "age": 22});
+                Get.toNamed(
+                  "/next",
+                  arguments: User(
+                    name: "탱구",
+                    age: 27,
+                  ),
+                );
               },
             ),
           ],
@@ -50,5 +56,8 @@ class Home extends StatelessWidget {
 class User {
   String name;
   int age;
-  User({this.name, this.age});
+  User({
+    required this.name,
+    required this.age,
+  });
 }
