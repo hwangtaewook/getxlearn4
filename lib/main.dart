@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getxlearn/src/home.dart';
-import 'package:getxlearn/src/page/normal/first.dart';
-import 'package:getxlearn/src/page/normal/next.dart';
+import 'package:getxlearn/src/page/named/first.dart';
+import 'package:getxlearn/src/page/named/next.dart';
+import 'package:getxlearn/src/page/named/user.dart';
 import 'package:getxlearn/src/page/normal/second.dart';
 
 void main() {
@@ -39,6 +40,10 @@ class MyApp extends StatelessWidget {
         GetPage(
             name: "/next",
             page: () => const NextPage(),
+            transition: Transition.zoom),
+        GetPage(
+            name: "/user/:uid",
+            page: () => const UserPage(),
             transition: Transition.zoom),
       ],
     );
