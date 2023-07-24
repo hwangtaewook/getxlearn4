@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getxlearn/src/page/normal/first.dart';
+import 'package:getxlearn/src/page/named/first.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -27,7 +27,7 @@ class Home extends StatelessWidget {
               },
             ),
             ElevatedButton(
-              child: const Text("Named 라우트"),
+              child: const Text("Named 루트"),
               onPressed: () {
                 // Navigator.of(context).pushNamed("/first");
                 Get.toNamed("/first");
@@ -39,10 +39,32 @@ class Home extends StatelessWidget {
                 // Navigator.of(context).pushNamed("/first");
                 Get.toNamed(
                   "/next",
-                  arguments: User(
-                    name: "탱구",
-                    age: 27,
-                  ),
+                  arguments: "탱구",
+                );
+                // Get.toNamed(
+                //   "/next",
+                //   arguments: User(
+                //     name: "탱구",
+                //     age: 27,
+                //   ),
+                // );
+              },
+            ),
+            ElevatedButton(
+              child: const Text("동적 url 전달"),
+              onPressed: () {
+                // Navigator.of(context).pushNamed("/first");
+                Get.toNamed(
+                  "/user/960425?name=탱구&age=27",
+                );
+              },
+            ),
+            ElevatedButton(
+              child: const Text("동적 url 전달"),
+              onPressed: () {
+                // Navigator.of(context).pushNamed("/first");
+                Get.toNamed(
+                  "/user/960425?name=탱구&age=27",
                 );
               },
             ),
@@ -54,10 +76,10 @@ class Home extends StatelessWidget {
 }
 
 class User {
-  String name;
-  int age;
+  String? name;
+  int? age;
   User({
-    required this.name,
-    required this.age,
+    this.name,
+    this.age,
   });
 }
