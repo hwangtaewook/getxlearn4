@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getxlearn/src/page/named/first.dart';
+import 'package:getxlearn/src/page/named/simple_state_mange_page.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -60,12 +61,10 @@ class Home extends StatelessWidget {
               },
             ),
             ElevatedButton(
-              child: const Text("동적 url 전달"),
+              child: const Text("단순상태관리"),
               onPressed: () {
                 // Navigator.of(context).pushNamed("/first");
-                Get.toNamed(
-                  "/user/960425?name=탱구&age=27",
-                );
+                Get.to(const SimpleStateMangePage());
               },
             ),
           ],

@@ -4,7 +4,7 @@ import 'package:getxlearn/src/home.dart';
 import 'package:getxlearn/src/page/named/first.dart';
 import 'package:getxlearn/src/page/named/next.dart';
 import 'package:getxlearn/src/page/named/user.dart';
-import 'package:getxlearn/src/page/normal/second.dart';
+import 'package:getxlearn/src/page/named/second.dart';
 
 void main() {
   runApp(const MyApp());
