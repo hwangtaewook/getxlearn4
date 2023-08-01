@@ -36,6 +36,16 @@ class WithGetX extends StatelessWidget {
           ),
           const IncreaseButton(id: "first"),
           const IncreaseButton(id: "second"),
+          GetBuilder<CountControllerWithGetX>(
+            builder: (controller) {
+              return ElevatedButton(
+                child: const Text("+"),
+                onPressed: () {
+                  controller.increase("first");
+                },
+              );
+            },
+          ),
         ],
       ),
     );

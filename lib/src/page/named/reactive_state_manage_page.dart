@@ -21,14 +21,14 @@ class ReactiveStateMangePage extends StatelessWidget {
               "GetX",
               style: TextStyle(fontSize: 30),
             ),
-            // GetX<CountControllerWithReactive>(
-            //   builder: (_) {
-            //     return Text(
-            //       "${Get.find<CountControllerWithReactive>().count.value}",
-            //       style: const TextStyle(fontSize: 30),
-            //     );
-            //   },
-            // ),
+            GetX<CountControllerWithReactive>(
+              builder: (controller) {
+                return Text(
+                  "${controller.count.value}",
+                  style: const TextStyle(fontSize: 30),
+                );
+              },
+            ),
             Obx(
               () => Text(
                 "${Get.find<CountControllerWithReactive>().count.value}",
