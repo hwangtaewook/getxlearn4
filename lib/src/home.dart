@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getxlearn/src/page/dependencys/dependency_manage_page.dart';
 import 'package:getxlearn/src/page/named/first.dart';
 import 'package:getxlearn/src/page/named/reactive_state_manage_page.dart';
 import 'package:getxlearn/src/page/named/simple_state_mange_page.dart';
@@ -73,6 +74,13 @@ class Home extends StatelessWidget {
               onPressed: () {
                 // Navigator.of(context).pushNamed("/first");
                 Get.to(const ReactiveStateMangePage());
+              },
+            ),
+            ElevatedButton(
+              child: const Text("의존성 관리"),
+              onPressed: () {
+                // Navigator.of(context).pushNamed("/first");
+                Get.to(const DependencyManagePage());
               },
             ),
           ],
