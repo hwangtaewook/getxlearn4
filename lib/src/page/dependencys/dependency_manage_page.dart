@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getxlearn/src/controller/dependency_controller.dart';
 
-import 'get_lazyput copy.dart';
+import 'get_lazyput_copy.dart';
 import 'get_put.dart';
 
 class DependencyManagePage extends StatelessWidget {
